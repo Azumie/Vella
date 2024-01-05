@@ -1,0 +1,28 @@
+﻿<h3>BindAfter</h3>
+
+<input type="text" @bind="nombreABuscar" @bind:after="nombresSimilares" />
+@if(listaPersonasSimilares !=null)
+{
+    <ul>
+    @foreach(var personaSimilar in listaPersonasSimilares)
+    {
+        <li>@personaSimilar</li>
+        
+    }
+    </ul>
+}
+
+
+@code {
+    private List<string> ?personas = new List<string> { "Pablo", "Sofia Suarez", "Pepe", "Jose Suarez"};
+    private string ?nombreABuscar;
+    private List<string> ?listaPersonasSimilares;
+    private async Task nombresSimilares()
+    {
+        listaPersonasSimilares = personas.Where(buscar => buscar.Contains(nombreABuscar)).ToList();
+        await Task.Delay(1000);
+
+    }
+
+
+}

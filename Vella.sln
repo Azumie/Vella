@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vella.Server", "Vella\Server\Vella.Server.csproj", "{1D3FFFFA-2A56-4BD4-8094-498FCBCD2793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vella.Server", "Vella\Server\Vella.Server.csproj", "{1D3FFFFA-2A56-4BD4-8094-498FCBCD2793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vella.Client", "Vella\Client\Vella.Client.csproj", "{FF877827-E0C5-450F-865E-D5FFE644BD6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vella.Client", "Vella\Client\Vella.Client.csproj", "{FF877827-E0C5-450F-865E-D5FFE644BD6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vella.Shared", "Vella\Shared\Vella.Shared.csproj", "{99CA49D8-2A3B-46CF-A311-8F3957D1084A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vella.Shared", "Vella\Shared\Vella.Shared.csproj", "{99CA49D8-2A3B-46CF-A311-8F3957D1084A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,21 @@
+﻿<div class="card">
+    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Producto Imagen">
+    <div class="card-body text-center">
+        <p class="card-text mb-1">$@product.UnitPrice</p>
+        <p class="card-title">@product.Name</p>
+        <p class="card-text">@product.Description</p>
+        <p class="card-text">@product.Available disponibles</p>
+        @if (estado)
+        {
+            <button>Eliminar</button>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public Product product { get; set; }
+    [Parameter]
+    public bool estado { get; set; } = true;
+}

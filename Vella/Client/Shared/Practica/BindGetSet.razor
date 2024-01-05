@@ -1,0 +1,18 @@
+﻿@namespace Vella.Client.Shared.Practica
+@*
+    Esto nos permite recibir un valor, el cual queremos cambiar al momento de escribir o quitar el foco del elemento. Para ello hacemos uso
+    de una función que nos permitirá cambiar el valor a como nos plazca.
+*@
+<h3>BindGetSet @palabraAConvertir</h3>
+<input type="text" @bind:get=@palabraAConvertir @bind:set="convertirPalabra" @bind:event="oninput"/>
+
+
+@code {
+    private string ?palabraAConvertir;
+
+    private Task convertirPalabra(string convertir)
+    {
+        palabraAConvertir = convertir.ToUpper();
+        return Task.CompletedTask;
+    }
+}
