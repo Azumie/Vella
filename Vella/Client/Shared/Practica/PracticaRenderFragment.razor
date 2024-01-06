@@ -1,0 +1,20 @@
+﻿<h3>Practica Render Fragment</h3>
+@if(producto is null)
+{
+    if(EsNulo is null)
+    {
+        <p>Cargando</p>
+    }
+    else
+    {
+        @EsNulo
+    }
+}
+
+
+@code {
+    [Parameter]
+    public Product producto { get; set; } = null;
+    [Parameter]
+    public RenderFragment EsNulo { get; set; } = null;
+}

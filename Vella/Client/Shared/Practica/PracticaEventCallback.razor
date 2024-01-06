@@ -1,0 +1,21 @@
+﻿<h3>EventCallback</h3>
+@*
+    Es aquel que se usa para pasar por parámetros las funciones que queremos que desempeñe un componente en cierto momento en específico
+    Si requiero pasarle parámetros a la funcion, se debe de hacer uso de InvokeAsync, la cual será la que te permita pasar el parámetro a la función
+    y este se lo tendrás que pasar por [Parameter[ al componente para que lo puedar pasar.
+    Si lo quiero hacer sin eso, simplemente elimino el InvokeAsync y en el [Parameter] elimino las <>.
+*@
+<p>@producto.Name</p>
+<button @onclick="@(() => accion.InvokeAsync(producto))">Eliminar</button>
+
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public Product? producto { get; set; }
+    
+    [Parameter]
+    public EventCallback<Product> accion { get; set; }
+    
+
+}
